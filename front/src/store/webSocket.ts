@@ -11,6 +11,8 @@ interface SocketState {
   pinNum: string;
   guestList: GuestType[];
   QuizItem: getQuizItem | null;
+  useGuestName: boolean;
+  getMessage: boolean;
 }
 
 const initialState: SocketState = {
@@ -18,12 +20,9 @@ const initialState: SocketState = {
   pinNum: "",
   guestList: [{ sender: "", img: 0 }],
   QuizItem: null,
+  useGuestName: false,
+  getMessage: false,
 };
-
-// const initialState: SocketState = {
-//   client: client,
-//   guestList: [{ sender: "", img: 0 }],
-// };
 
 const socketSlice = createSlice({
   name: "socket",
@@ -39,6 +38,12 @@ const socketSlice = createSlice({
           // actions.payload로 API DOCS 에 써있는 sending message 정보 넣으면 됨
         });
       }
+    },
+    updateGetMessage: (state, actions) => {
+      state.getMessage = actions.payload
+    },
+    updateUseGuestName: (state, actions) => {
+      state.useGuestName = actions.payload;
     },
 
     changeGuestList: (state, actions) => {
@@ -61,6 +66,7 @@ export const connectAndSubscribe = (socketProps: SocketPropsType, dispatch: Func
   client.onConnect = async () => {
     await subscribe(socketProps, dispatch);
     await sendEnterMessage(socketProps);
+    await dispatch(socketActions.updateGetMessage(true));
     console.log("socket connected");
   };
   client.onDisconnect = () => {
