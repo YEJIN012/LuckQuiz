@@ -126,11 +126,11 @@ public class MessageController {
                 EmotionResponse emotionResponse = new EmotionResponse();
                 emotionResponse.setType(result.getType());
                 if (result.getResult().getFaces() == null) {
-                    System.out.println("1");
-                    emotionResponse.setEmotion(null);
+                    emotionResponse.emotionResult.emotion = null;
+                    emotionResponse.emotionResult.roi=null;
                 } else {
-                    System.out.println("2");
-                    emotionResponse.setEmotion(result.getResult().getFaces().get(0).getEmotion());
+                    emotionResponse.emotionResult.emotion = result.getResult().getFaces().get(0).getEmotion();
+                    emotionResponse.emotionResult.roi = result.getResult().getFaces().get(0).getRoi();
                 }
 
 
