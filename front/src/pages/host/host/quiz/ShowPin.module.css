@@ -1,0 +1,82 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10% 10%;
+  box-sizing: border-box;
+  gap: 5%;
+}
+
+.logo {
+  width: 35%;
+  display: flex;
+  min-width: 160px;
+  justify-self: center;
+  align-self: center;
+}
+
+.whiteBox {
+  width: max-content;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.pinBox {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* gap: 20px; */
+  text-align: center;
+  /* margin-right: 13%; */
+}
+
+.pinNum {
+  font-size: 3vw;
+}
+
+@media screen and (min-width: 767px) {
+  .whiteBox {
+    width: 57%;
+    flex-direction: row;
+    padding: 1%;
+    padding-right: 2%;
+    border-radius: 10px;
+    font-size: 2.3vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .whiteBox {
+    flex-direction: column;
+    min-width: 200px;
+    padding: 20px 5%;
+    border-radius: 5px;
+    font-size: 20px;
+  }
+  .pinBox {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* gap: 20px; */
+    text-align: center;
+  }
+}
+.pinBox > p {
+  margin-top: 8%;
+  margin-bottom: 8%;
+}
+
+.whiteBox > img {
+  height:"100%";
+  object-fit:"contain";
+}

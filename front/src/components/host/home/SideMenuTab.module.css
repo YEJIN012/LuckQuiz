@@ -1,0 +1,39 @@
+.sideTab {
+  width: 70%;
+  min-width: 91px;
+  background-color: #F2EFFF;
+  border-radius: 20px;
+  box-sizing: border-box;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7% 7% 7% 10%;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  padding: 10% 4%;
+  font-size: 17px;
+  justify-content: space-evenly;
+}
+
+.profileName {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.profileImg {
+  width: 35%;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  object-fit:cover;
+}

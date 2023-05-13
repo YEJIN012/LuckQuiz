@@ -1,0 +1,45 @@
+.content_nav{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.nav_left{
+display: flex;
+color: white;
+width: 340px;
+justify-content: space-between;
+}
+
+.nav_left>select{
+    width: 160px;
+    height: 60px;
+    border-radius: 20px;
+    font-size: 22px;
+}
+
+.nav_right{
+    width: 340px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_right>div{
+    width: 160px;
+    height: 60px;
+    border-radius: 20px;
+    background-color: var(  --white-color);
+    display: flex;
+    font-size: 22px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    word-break: keep-all;
+    font-weight: bold;
+}
+
+.select_form{
+    padding-left: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
