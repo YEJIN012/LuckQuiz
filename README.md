@@ -1,4 +1,5 @@
 # <img src= "https://github.com/Ryeohwan/TRL/assets/73810834/79367754-6ed4-4510-9da4-c658efef4e8b"  width="20" height="20"/> LuckQuiz
+SSAFY 8기 자율 프로젝트 우수상 🏆
 
 ## 기술 스택
 
